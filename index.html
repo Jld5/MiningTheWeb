@@ -33,7 +33,16 @@
     <!-- Insert text and iframe here -->
     <!-- Example iframe from CartoDB -->
 <div> Visualization: Project One, Julia </div>
-<div> Earthquakes on March 31.</div>
+<div> Recorded Earthquakes, March 31. Each circle, colored according to a severity on the richter scale, represents a unique instance. The blue lines indicate present day tectonic plates boundaries. Close proximity to the tectonic plate boundaries greatly increases the likelihood and frequency of earthquakes. 
+  <br>
+  In designing this map, I used the CartoDB chloropleth setting, which represents each earthquake instance with a colored circle based on the magnitude of the instance. When you hover over each circle, the magnitude and location appears. If you click on a circle, the magnitude, latitude, longitude, and location appears. I added a picture behind the location, which is the same picture for each entity. I did figure out how to have the specific google street view picture appear (by copying the script from a blog post found online), but since it was missing for most of the locations, I didn't use this. I thought an alternative could be to write a script that pulls the first image of a google image search on the specific place, but this was much more complicated than I am qualified for! <br>
+  <br>
+  The legend in the bottom right hand corner explains the range of values associated with each of the different colors. However, I didn't use the CartoDB settings and instead fiddled with HTML code to make some of the text italicized, change the text color, and add a sub-header. I spent a while trying to add a background image in the legend--I wanted to include the richter logarithmic curve--but while I eventually figured out how to do so, it looked more distracting than helpful and so I didn't include it. If I had more expertise, I think it would have been cool to make a basic logarithmic curve in R, and then plot the ranges--by color--on this as a replacement for the text in the legend. <br>
+  <br>
+  I wanted to experiment with adding layers, so I spent quite a while searching for a new dataset to overlay with the initial chloropleth map. I hoped to find one that was relevant to earthquake frequency and magnitude, as well as increased understanding of the topic. I first experimented with a dataset that mapped fault lines. However, I only found data for the U.S., so I kept looking. Eventually, I found the plate tectonic boundaries dataset. The source provided the data in three separate files, which I merged into a single data table in CartoDB. I added this new table as a single layer to my map, choosing the color blue for the boundary lines, to contrast with the chloropleth layer. I would have liked to add an entry in the legend for the tectonic plate boundaries, with a blue line as the symbol. However, I could not figure out how to change the bullet point to a line, so I left it out. <br>
+  <br>
+  Source, earthquake data: CartoDB. Source, tectonic plate boundaries: http://www.ig.utexas.edu/research/projects/plates/pt.info.htm. </div>
+  <br>
 <div id="vis1">
 <iframe width='100%' height='520' frameborder='0' src='http://jld5.cartodb.com/viz/258bbc6c-d8a8-11e4-a572-0e018d66dc29/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
     
