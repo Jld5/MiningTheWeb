@@ -5,3 +5,10 @@ Client id
 
 Client secret
 4CP1033GKQSARSFTYPAM1AI4PF4SDRDD3P53VMBORFJ0OTID
+
+https://api.foursquare.com/v2/venues/search
+
+City of New York Developer Portal
+https://api.cityofnewyork.us/geoclient/v1/bin.json?
+Project App ID: 7358b22d
+Project App Key: 10137ab2bf0df7a4d6d74a19892ff063
