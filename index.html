@@ -55,8 +55,19 @@
 </div id="vis2"> 
    <iframe width='100%' height='520' frameborder='0' src='https://jld5.cartodb.com/viz/a9c55c7a-e313-11e4-9bdd-0e43f3deba5a/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-<div> Visualization: Project Three</div>
-<div> Descriptive text about the project that would help anyone understand the context of the information, the source of the data and the story behind why you made it.</div>
+<div><b>Visualization: Renewable Energy in the U.S.</b></div>
+<div><em>Project One, Julia.</em></div>
+<br>
+<div> Using the bubble technique, this map illustrates the number of renewable energy power plants registered with the U.S. Energy Information Administration in each state in 2013. The bubbles sit upon a chlorpleth layer, which is colored according to the average amount of energy (kwh per capita) used by the residents of each state in 2010.When you zoom into the map, the green bubbles disappear and instead the individual power plants, colored by energy source, appear. Interestingly, states with lower average energy use per capita also appear to have clusters of renewable energy power plants. While certainly not indicating a causal link, there may be some connection between lower energy use and adoption of renewable energy sources.<br>
+<br>
+Because this visualization has a large number of colorful data points, I used a gray scale for the chloropleth layer to create contrast. I used green for the bubbles simply because it green is usually associated with environmentally-conscious products.The bigger the green bubble, the more renewable energy in the state. The individual power plants, are depicted with bright inidividual points, which also contrast nicely with the gray-scale chloropleth. They only appear on zoom 5. <br>
+<br>
+I spent quite a while changing the CSS code associated with the legend and info-windows. I wanted to have the legend correlate with the zoom function so that the boxe depicting the number of power plants disappeared when the green bubbles disappear and the energy source legend only appears when they also appear on the map. While I could not figure out how to do this, I did make the boxes much smaller, change the type face, format the text, and fix the symbols slightly. I also used CSS to format the info window associated with each layer. <br>
+<br>
+The power plant data is provided by the U.S. Energy Information Administration. However, it is split into a number of massive files. I ultimately used the data from the power plants and pulled the type of energy from the generator file. This assumes that the generators all operate on the same source of power. In Google Refine, I transformed the type of energy from abbreviations to categories of energy, grouping points like the anthracite coal, bituminous coal, lignite coal, coal-derived synthesis gas, subbituminous coal, and refined coal into one generic category of coal.Ultimately all of this data overwhelmed the graph and so I decided just to focus on renewable energy power plants. The number of renewable energy power plants by state is actually from the same U.S. EIA data, but I found the sums for each state, matched it with state boundary geographic data, and then made a new data table and layer. The energy use by state statistics stem from a different chart, which I joined with geographic data in CartoDB.  <br>
+<br>
+I would have liked to calculate the average energy produced by each power plant. However, each power plant is associated with a number of different generators. While I think this is possible, it would have required much more manipulation of the data in excel in order to find the average energy of each generator, the average of all generators associated with an individual plant, and then match that number to the unique plant identifier in a different excel file. <br>
+</div>
 </div id="vis3">
   <iframe width='100%' height='520' frameborder='0' src='https://jld5.cartodb.com/viz/1cc640be-e791-11e4-a569-0e853d047bba/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
    
